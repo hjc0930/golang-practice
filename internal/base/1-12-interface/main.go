@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type Payment interface {
 	Pay(amount float64) (string, error)
 	Refund(transactionID string, amount float64) (string, error)
@@ -49,7 +51,9 @@ func (a *WechatPay) Query(transactionID string) (string, error) {
 }
 
 func ProcessPayment(p Payment, amount float64) (string, error) {
-
+	fmt.Println(p.Pay(amount))
+	fmt.Println(amount)
+	return "", nil
 }
 
 func main() {
