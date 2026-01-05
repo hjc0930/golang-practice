@@ -40,12 +40,12 @@ func (a *WechatPay) Pay(amount float64) (string, error) {
 	return "WechatPay payment successful", nil
 }
 
-func (a *WechatPay) Refund(transactionID string, amount float64) (string, error) {
+func (w *WechatPay) Refund(transactionID string, amount float64) (string, error) {
 	// Implementation for Alipay refund
 	return "WechatPay refund successful", nil
 }
 
-func (a *WechatPay) Query(transactionID string) (string, error) {
+func (w *WechatPay) Query(transactionID string) (string, error) {
 	// Implementation for Alipay query
 	return "WechatPay transaction details", nil
 }
